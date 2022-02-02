@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Button from "./components/Button";
 import Console from "./components/Console";
 import Flex from "./components/Flex";
 import Title from "./components/Title";
@@ -15,9 +16,14 @@ function App() {
   return (
     <AppWrapper>
       <Flex justify={"center"}>
-        <Title color={"blue"}>Title of App</Title>
+        <Title>Title of App</Title>
       </Flex>
-      <Console />
+      <Flex direction="column" margin={"10px 0"}>
+        <Console />
+        <Button color="blue" align="flex-end">
+          Send
+        </Button>
+      </Flex>
     </AppWrapper>
   );
 }
